@@ -1,0 +1,88 @@
+
+
+#more{
+	bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.navbar-static-top{
+	margin-bottom: 20px;
+}
+.bigModal{
+   width:960px;
+   margin-left:-480px;
+   border-radius: none;
+   -webkit-border-radius: none;
+   -moz-border-radius: none;
+}
+.modal {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.modal-body{
+	max-height: 600px;
+	font-size: 12px;
+}
+.modal.fade.in {
+	top: 5%;
+}
+.box{
+	background: #fff;
+  margin-bottom: 20px;
+  /*
+  -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    4px 4px 5px rgba(50, 50, 50, 0.75);
+  box-shadow:         4px 4px 5px rgba(50, 50, 50, 0.75);
+  */
+}
+.padding{
+	padding: 10px;
+}
+.main-img{
+}
+.meta-profile img{
+	width: 30px;
+	height: 30px;
+	padding: 5px 5px 0 5px;
+}
+.instameta{
+	padding: 10px 5px 0 5px;
+}
+.modal-profile{
+	vertical-align: bottom;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.modal-profile img{
+	height: 60px;
+	width: 60px;
+}
+.citem{
+	display: inline-block;
+}
+.table th, .table td{
+	border: none;
+}
+.tags{
+	margin-left: 35px;
+}
+.comment-img{
+	width: 40px;
+	height: 40px;
+}
+.comment-meta{
+	vertical-align: top;
+}
+.comments{
+	margin-bottom: 10px;
+}
+.comments img{
+	padding-right: 8px;
+	width: 30px;
+	height: 30px;
+}
+.comments p{
+	margin-left: 42px;
+}
