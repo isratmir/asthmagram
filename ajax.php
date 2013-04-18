@@ -1,18 +1,11 @@
 <?php
 
-	require "instagram.class.php";
-	
-	$instagram = new Instagram('client_id');
-	
 	$tag = $_GET['tag'];
 	$maxID = $_GET['max_id'];
-	$clientID = $instagram->getApiKey();
+	$clientID = "099ddb4d09e648a6b11448961a99256b";
+	$next_url = "https://api.instagram.com/v1/tags/".$tag."/media/recent?client_id={$clientID}&max_tag_id={$maxID}";
+	$media = json_decode(file_get_contents($next_url));
 	
-	//$call = new stdClass;
-	//$call->pagination->next_max_id=$maxID;
-	//$call->pagination->next_url="https://api.instagram.com/v1/tags/{$tag}/media/recent?client_id={$clientID}&max_tag_id={$maxID}";
-	
-	$media = $instagram->getTagMedia($tag,$auth=false,array('max_tag_id'=>$maxID));
 	
 	$images = array();
 	$dt = array();

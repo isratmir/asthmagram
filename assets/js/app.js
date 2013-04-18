@@ -14,8 +14,8 @@
           cache: false,
           success: function(data) {
             // Output data
-            $.each(data.images, function(i, src) {
-              $('ul#photos').append('<li><img src="' + src + '"></li>');
+            $.each(data.dt, function(i) {
+              $('.row').append('<div class="span4 box"><div class="padding"><img src="' + data.dt[i].images.standard_resolution.url + '"></div></div>');
             });
             
             // Store new maxid

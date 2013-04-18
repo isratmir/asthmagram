@@ -86,3 +86,10 @@
 .comments p{
 	margin-left: 42px;
 }
+.greedy-btn{
+	clear: both;
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	padding: 9px 0 0;
+}

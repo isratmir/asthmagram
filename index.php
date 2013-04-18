@@ -1,9 +1,12 @@
 <?php
-  require_once 'instagram.class.php';
-  $instagram = new Instagram('099ddb4d09e648a6b11448961a99256b');
+  
   $tag="beatasthma";
-  $media = $instagram->getTagMedia($tag);
+  $accessToken = "put here your instagra access token";
+	
+	$url = "https://api.instagram.com/v1/tags/{$tag}/media/recent?access_token={$accessToken}";
+	$media = json_decode(file_get_contents($url));
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,6 +43,7 @@
 
    <div class="container">
     <div class="row">
+	<?php //die(var_dump($media)); ?>
     <?php foreach ($media->data as $data): ?> 
       <div class="span4 box">
         <div class="padding">
@@ -126,9 +130,9 @@
      <?php endforeach; ?>
   </div>
 </div>
- 
-  <button data-maxid="<?php echo $media->pagination->next_max_id; ?>" data-tag="<?php echo $tag; ?>">Load more ...</button>
-
+ <div class="greedy-btn">
+  <div class="btn btn-primary" id="more" data-maxid="<?php echo $media->pagination->next_max_id; ?>" data-tag="<?php echo $tag; ?>">Load more ...</div>
+ </div>
  
 </body>
 </html>
